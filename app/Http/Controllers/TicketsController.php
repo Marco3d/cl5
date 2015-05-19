@@ -13,17 +13,22 @@ class TicketsController extends Controller
 
     public function popular()
     {
-        dd('popular');
+        return view('tickets/list');
     }
 
     public function open()
     {
-        dd('pendientes');
+        return view('tickets/list');
     }
 
     public function closed()
     {
-        dd('tutoriales');
+        return view('tickets/list');
+    }
+
+    public function ayuda()
+    {
+        return view('tickets/list');
     }
 
     public function details($id)

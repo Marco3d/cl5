@@ -35,6 +35,12 @@ Route::get('/tutoriales', [
     'uses' => 'TicketsController@closed',
 ]);
 
+Route::get('/ayuda', [
+
+    'as' => 'tickets.ayuda',
+    'uses' => 'TicketsController@ayuda',
+]);
+
 Route::get('/solicitud/{id}', [
 
     'as' => 'tickets.details',
