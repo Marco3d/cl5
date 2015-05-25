@@ -10,5 +10,23 @@ class HtmlBuilder extends CollectiveHtmlBuilder {
 
     }
 
+    public function classes(array $classes)
+    {
+        $html = '';
+        foreach ($classes as $name => $bool) {
+            if (is_int($name)) {
+                $name = $bool;
+                $bool = true;
+            }
+            if ($bool) {
+                $html .= $name.' ';
+            }
+        }
+        if (! empty($html)) {
+            return ' class="'.trim($html).'"';
+        }
+        return '';
+    }
+
 
 }

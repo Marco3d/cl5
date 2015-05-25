@@ -1,3 +1,4 @@
+
 @extends('layout')
 
 @section('content')
@@ -13,8 +14,7 @@
                 </h1>
 
                 <p class="label label-info news">
-                    {{Lang::choice(Route::currentRouteName().'_total', $tickets->total())}}
-                                   </p>
+                   Hay {{$tickets->total()}} {{$title}}            </p>
 
                     @foreach($tickets as $ticket)
                     @include('tickets/partials/item', compact('ticket'))
